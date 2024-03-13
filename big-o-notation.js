@@ -25,3 +25,30 @@ function multipleArr(n) {
   }
 }
 multipleArr(2);
+
+/*
+    Constant don't matter
+    O(2n) => O(n)
+    O(100) => O(1)
+    O(15n^2) => O(n^2)
+*/
+
+/*
+    Smaller terms don't matter
+    O(n + 10) => O(n)
+    O(100n + 50) => O(n)
+    O(n^2 + 5n + 8) => O(n^2)
+*/
+
+/*
+    Big - O Complexity Chart
+
+    O(1)        =   Amazing
+    O(log n)    =   Good
+    O(n)        =   Fair
+    O(n log n)  =   Ban
+    O(n^2)      =   Terrible
+    O(2^n)      =   Terrible
+    O(n!)       =   Terrible
+
+*/
