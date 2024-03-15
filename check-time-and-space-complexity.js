@@ -46,3 +46,21 @@ function double(arr) {
   return newArr; // It returns an array with n times number
 }
 console.log(double([1, 2, 3, 4, 5]));
+
+/* ****************** Checking Space Complexity at a time ****************** */
+function uniqueName(arr) {
+  let uniqueName = [];
+  for (let i = 0; i < arr.length; i++) {
+    //n times
+    let ele = arr[i];
+    if (!uniqueName.includes(ele)) {
+      //n times
+      uniqueName.push(ele);
+    }
+  }
+  return uniqueName;
+}
+// Time complexity = n^2
+// Space complexity = n
+const newArr = ["a", "b", "c", "d", "e", "a", "c"];
+console.log(uniqueName(newArr));
