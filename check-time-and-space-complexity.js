@@ -51,14 +51,14 @@ console.log(double([1, 2, 3, 4, 5]));
 function uniqueName(arr) {
   let uniqueName = [];
   for (let i = 0; i < arr.length; i++) {
-    //n times
+    // n times
     let ele = arr[i];
     if (!uniqueName.includes(ele)) {
-      //n times
+      // n times
       uniqueName.push(ele);
     }
   }
-  return uniqueName;
+  return uniqueName; // n space
 }
 // Time complexity = n^2
 // Space complexity = n
