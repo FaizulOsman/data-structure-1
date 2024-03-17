@@ -47,6 +47,16 @@ function double(arr) {
 }
 console.log(double([1, 2, 3, 4, 5]));
 
+/* ******** O(log n) ******** */
+function logN(n) {
+  while (n > 1) {
+    console.log(n);
+    n /= 2;
+  }
+  console.log("Done");
+}
+logN(8);
+
 /* ****************** Checking Space Complexity at a time ****************** */
 function uniqueName(arr) {
   let uniqueName = [];
