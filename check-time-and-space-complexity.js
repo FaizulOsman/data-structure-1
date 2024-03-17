@@ -57,6 +57,17 @@ function logN(n) {
 }
 logN(8);
 
+/* ******** Recursive - O(log n) ******** */
+function anotherLogN(n) {
+  while (n <= 1) {
+    console.log("Done");
+    return;
+  }
+  console.log(n);
+  anotherLogN(n / 2);
+}
+anotherLogN(8);
+
 /* ****************** Checking Space Complexity at a time ****************** */
 function uniqueName(arr) {
   let uniqueName = [];
