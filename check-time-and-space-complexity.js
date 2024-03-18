@@ -92,5 +92,19 @@ Object.keys() = O(n)
 Object.values() = O(n)
 Object.entries() = O(n)
 Object.hasOwnProperty() = O(1)
+
+Array.push() = O(1)
+Array.pop() = O(1)
+
+Array.shift() = O(n)
+Array.unShift() = O(n)
+
+Array.includes() = O(n)
+Array[2] = O(1)
+
+Array.forEach() = O(n)
+Array.map() = O(n)
+Array.filter() = O(n)
+Array.reduce() = O(n)
 ******************************************
 */
