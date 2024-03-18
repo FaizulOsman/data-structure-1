@@ -85,3 +85,12 @@ function uniqueName(arr) {
 // Space complexity = n
 const newArr = ["a", "b", "c", "d", "e", "a", "c"];
 console.log(uniqueName(newArr));
+
+/*
+******************************************
+Object.keys() = O(n)
+Object.values() = O(n)
+Object.entries() = O(n)
+Object.hasOwnProperty() = O(1)
+******************************************
+*/
