@@ -1,4 +1,6 @@
-/* ********* Recursion ********* */
+/* ##########################################################
+************************* Recursion *************************
+########################################################## */
 let sum = 0;
 function sumOfNumber(n) {
   sum += n;
@@ -8,17 +10,19 @@ function sumOfNumber(n) {
   }
   return sum;
 }
+// Time Complexity = O(n)
 console.log(sumOfNumber(10));
 
-/* ********* Make it simple ********* */
+/* ****************** Make it simple ****************** */
 function sumOfNumber2(n) {
   if (n < 0) return 0;
 
   return n + sumOfNumber2(n - 1);
 }
+// Time Complexity = O(n)
 console.log(sumOfNumber2(10));
 
-/* ********* Sum of Array using Recursion ********* */
+/* ****************** Sum of Array using Recursion ****************** */
 function sumOfArray(arr) {
   if (arr.length === 0) return 0;
 
