@@ -59,3 +59,23 @@ const now = Date.now();
 console.log(sumOfArrayFast(input));
 const finish = Date.now();
 console.log(`Time elapsed for fast function: ${finish - now} ms`);
+
+/* ###############################################################
+*********** Find Odd Numbers - Recursion Helper Method ***********
+############################################################### */
+let arr = [2, 3, 5, 7, 3, 4, 12, 32, 55, 75];
+function findOddNumbers(arr) {
+  let result = [];
+  function helper(input) {
+    if (input.length === 0) return;
+
+    if (input[0] % 2 !== 0) {
+      result.push(input[0]);
+    }
+    return helper(input.slice(1));
+  }
+  helper(arr);
+
+  return result;
+}
+console.log(findOddNumbers(arr));
