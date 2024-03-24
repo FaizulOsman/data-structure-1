@@ -25,17 +25,17 @@ console.log(sumOfNumber2(10));
 /* ###############################################################
 ****************** Sum of Array using Recursion ******************
 ############################################################### */
-const input = new Array(5000).fill(1);
+const input = new Array(7000).fill(1);
 
-function sumOfArray(arr) {
+function sumOfArraySlow(arr) {
   if (arr.length === 0) return 0;
 
   let rest = arr.slice(1);
-  return arr[0] + sumOfArray(rest);
+  return arr[0] + sumOfArraySlow(rest);
 }
 // Time Complexity = O(n^2)
 // Space Complexity = O(n)
-console.log(sumOfArray(input));
+console.log(sumOfArraySlow(input));
 
 /* ****************** Make it simple ****************** */
 function sumOfArrayFast(arr) {
@@ -49,3 +49,13 @@ function sumOfArrayHelper(arr, index) {
 // Time Complexity = O(n)
 // Space Complexity = O(n)
 console.log(sumOfArrayFast(input));
+
+const start = Date.now();
+console.log(sumOfArraySlow(input));
+const end = Date.now();
+console.log(`Time elapsed for slow function: ${end - start} ms`);
+
+const now = Date.now();
+console.log(sumOfArrayFast(input));
+const finish = Date.now();
+console.log(`Time elapsed for fast function: ${finish - now} ms`);
