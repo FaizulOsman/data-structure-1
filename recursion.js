@@ -22,7 +22,11 @@ function sumOfNumber2(n) {
 // Time Complexity = O(n)
 console.log(sumOfNumber2(10));
 
-/* ****************** Sum of Array using Recursion ****************** */
+/* ###############################################################
+****************** Sum of Array using Recursion ******************
+############################################################### */
+const input = new Array(5000).fill(1);
+
 function sumOfArray(arr) {
   if (arr.length === 0) return 0;
 
@@ -31,4 +35,17 @@ function sumOfArray(arr) {
 }
 // Time Complexity = O(n^2)
 // Space Complexity = O(n)
-console.log(sumOfArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+console.log(sumOfArray(input));
+
+/* ****************** Make it simple ****************** */
+function sumOfArrayFast(arr) {
+  return sumOfArrayHelper(arr, 0);
+}
+function sumOfArrayHelper(arr, index) {
+  if (arr.length === index) return 0;
+
+  return arr[index] + sumOfArrayHelper(arr, index + 1);
+}
+// Time Complexity = O(n)
+// Space Complexity = O(n)
+console.log(sumOfArrayFast(input));
