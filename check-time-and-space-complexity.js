@@ -1,4 +1,6 @@
-/* ****************** Checking Time Complexity ****************** */
+/* ###########################################################
+****************** Checking Time Complexity ****************** 
+########################################################### */
 
 /* ******** Normal Way (1.243549s) ******** */
 function sumOfAllNormalWay(n) {
@@ -25,7 +27,9 @@ let time4 = performance.now();
 
 console.log(`Execution time: ${(time4 - time3) / 1000}`);
 
-/* ****************** Checking Space Complexity ****************** */
+/* ############################################################
+****************** Checking Space Complexity ****************** 
+############################################################ */
 
 /* ******** O(1) ******** */
 function sum(arr) {
@@ -68,7 +72,9 @@ function anotherLogN(n) {
 }
 anotherLogN(8);
 
-/* ****************** Checking Space Complexity at a time ****************** */
+/* ###########################################################
+********* Checking Time & Space Complexity at a time *********
+########################################################### */
 function uniqueName(arr) {
   let uniqueName = [];
   for (let i = 0; i < arr.length; i++) {
