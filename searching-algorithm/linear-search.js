@@ -20,3 +20,21 @@ function findOddNumbers(array) {
   return result;
 }
 console.log(findOddNumbers([4, 2, 6, 8, 2, 8, 5, 3, 9, 0]));
+
+/* Find Odd Numbers from the array using recursion function*/
+function findOddNumbersRecursion(array) {
+  let result = [];
+  function helper(newArr) {
+    if (newArr.length === 0) return;
+
+    if (newArr[0] % 2 !== 0) {
+      result.push(newArr[0]);
+    }
+
+    helper(newArr.slice(1));
+  }
+  helper(array);
+
+  return result;
+}
+console.log(findOddNumbersRecursion([4, 2, 6, 8, 2, 8, 5, 3, 9, 0]));
